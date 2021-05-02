@@ -16,6 +16,7 @@ public class Cliente {
     private String ciudadCliente;
     private String direccionCliente;
 
+    //No se incluye la direccion en el constructor ya que las vistas solo muestran la ciudad como ubicacion.
     public Cliente(long dniCliente, String nombreCliente, String apellidoCliente, String ciudadCliente) {
         this.dniCliente = dniCliente;
         this.nombreCliente = nombreCliente;
@@ -64,6 +65,12 @@ public class Cliente {
     public void setDireccionCliente(String direccionCliente) {
         this.direccionCliente = direccionCliente;
     }
+
+    @Override
+    public String toString() {
+        return "Dni:" + dniCliente + ", Nombre:" + nombreCliente + ", Apellido:" + apellidoCliente;
+    }
+    
     
     
 }
